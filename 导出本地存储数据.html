@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>累计计数案例</title>
+    <script>
+        function myFun(){
+            if (localStorage.clickCount){
+                localStorage.clickCount = Number(localStorage.clickCount) + 1;
+            }else{
+                localStorage.clearCount = 1;
+            }
+            document.getElementById("demo").innerHTML = localStorage.clickCount;
+
+        }
+    </script>
+</head>
+<body>
+    <button onclick="myFun()">累计计数</button>
+    <div id="demo"></div>
+</body>
+</html>
